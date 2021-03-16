@@ -1,0 +1,21 @@
+.app {
+  text-align: center;
+  .container {
+    position: relative;
+    background-image: url('../../../images/pattern-bg.png');
+    background-size: cover;
+    height: 200px;
+  }
+}
+
+.app img {
+  max-width: 150px;
+}
+
+@media screen and (min-width: 600px) {
+  .app {
+    .container {
+      height: 240px;
+    }
+  }
+}

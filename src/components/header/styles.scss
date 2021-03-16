@@ -1,0 +1,64 @@
+@use 'src/styles/vars';
+@use 'src/styles/extend';
+
+.header {
+  @extend .margin-bottom;
+  &__h1 {
+    @extend .padding;
+    color: vars.$color-light;
+    font-size: 1.2em;
+  }
+  &__form {
+    &--input {
+      @extend .border;
+      border: none;
+      width: 70vw;
+      height: 35px;
+      @extend .border-left;
+      padding-left: 0.5rem;
+      padding-bottom: 1px;
+    }
+    &--button {
+      height: 35px;
+      width: 35px;
+      background-color: vars.$color-dark;
+      color: vars.$color-light;
+      border: vars.$color-dark;
+      @extend .border-right;
+      padding-bottom: 2px;
+      @extend .border;
+    }
+
+    .chevron {
+      position: relative;
+      bottom: 1px;
+      left: 1px;
+      font-size: 0.6rem;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    padding: 1.5rem 0 1.5rem 0;
+    &__h1 {
+      font-size: 1.9em;
+      margin-bottom: 1rem;
+    }
+    &__form {
+      &--input {
+        width: 35vw;
+        height: 45px;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        padding-top: 6px;
+        padding-left: 0.7rem;
+      }
+      &--button {
+        height: 45px;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
