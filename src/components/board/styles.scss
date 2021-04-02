@@ -9,6 +9,7 @@
   @extend .margin-bottom;
   padding-bottom: 0.5rem;
   width: 80vw;
+  max-width: 1000px;
   margin: 0 auto;
   @extend .border-left;
   @extend .border-right;
@@ -37,7 +38,7 @@
   .main__container {
     padding: 1rem;
     // text-align: left
-    min-width: 20vw;
+    min-width: 10vw;
     &--title {
       font-size: 0.7em;
       letter-spacing: 2px;

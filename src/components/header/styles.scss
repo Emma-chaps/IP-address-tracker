@@ -8,33 +8,98 @@
     color: vars.$color-light;
     font-size: 1.2em;
   }
-  &__form {
-    &--input {
-      @extend .border;
-      border: none;
-      width: 70vw;
-      height: 35px;
-      @extend .border-left;
-      padding-left: 0.5rem;
-      padding-bottom: 1px;
-    }
-    &--button {
-      height: 35px;
-      width: 35px;
-      background-color: vars.$color-dark;
-      color: vars.$color-light;
-      border: vars.$color-dark;
-      @extend .border-right;
-      padding-bottom: 2px;
-      @extend .border;
-    }
+  &__container-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    &__form {
+      margin-right: 0.7rem;
+      &--input {
+        @extend .border;
+        border: none;
+        width: 40vw;
+        height: 35px;
+        @extend .border-left;
+        padding-left: 0.5rem;
+        padding-bottom: 1px;
+      }
+      &--button {
+        height: 35px;
+        width: 35px;
+        background-color: vars.$color-dark;
+        color: vars.$color-light;
+        border: vars.$color-dark;
+        @extend .border-right;
+        padding-bottom: 1px;
+        @extend .border;
+      }
+      &--button:hover {
+        background-color: scale-color(#453e99, $lightness: +05%);
+      }
+      &--button:active {
+        background-color: scale-color(#453e99, $lightness: +15%);
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+      }
 
-    .chevron {
+      .chevron {
+        position: relative;
+        bottom: 1px;
+        left: 1px;
+        font-size: 0.6rem;
+        color: #fff;
+      }
+    }
+    &__btn {
       position: relative;
-      bottom: 1px;
-      left: 1px;
-      font-size: 0.6rem;
-      color: #fff;
+      background-color: vars.$color-dark;
+      border-radius: 7px;
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      height: 35px;
+      font-size: 0.7em;
+      font-weight: 500;
+      color: vars.$color-light;
+      cursor: grab;
+      @extend .padding;
+      margin-right: 0.5rem;
+    }
+    &__btn:hover {
+      background-color: scale-color(#453e99, $lightness: +05%);
+    }
+    &__btn:active {
+      background-color: scale-color(#453e99, $lightness: +15%);
+      box-shadow: 0 3px #666;
+      transform: translateY(4px);
+    }
+    .lds-dual-ring {
+      position: absolute;
+      display: inline-block;
+      right: -25px;
+      top: -4px;
+      width: 25px;
+      height: 25px;
+    }
+    .lds-dual-ring:after {
+      content: ' ';
+      display: block;
+      width: 25px;
+      height: 25px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      border-color: #fff transparent #fff transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+    }
+    @keyframes lds-dual-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 }
@@ -46,18 +111,12 @@
       font-size: 1.9em;
       margin-bottom: 1rem;
     }
-    &__form {
-      &--input {
-        width: 35vw;
-        height: 45px;
-        font-size: 1.2em;
-        padding-bottom: 10px;
-        padding-top: 6px;
-        padding-left: 0.7rem;
-      }
-      &--button {
-        height: 45px;
-        padding-bottom: 0px;
+    &__container-search {
+      &__form {
+        &--input {
+          width: 30vw;
+          max-width: 300px;
+        }
       }
     }
   }
